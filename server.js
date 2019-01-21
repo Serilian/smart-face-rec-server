@@ -2,9 +2,11 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt-nodejs');
 const cors = require('cors');
+const helmet = require('helmet');
 
 const app = express();
 app.use(cors());
+app.use(helmet());
 app.use(bodyParser.json());
 
 
