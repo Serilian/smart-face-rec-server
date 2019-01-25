@@ -17,26 +17,15 @@ app.use(bodyParser.json());
 
 const db = require('knex')(dbProperties.pg);
 
-app.get('/', (req, res) => {
-        home.homeHandler(req, res, db)
-    }
-);
+app.get('/', home.homeHandler(db));
 
-app.post('/signin', (req, res) => {
-    signin.signinHandler(req, res, db, bcrypt);
-});
+app.post('/signin', signin.signinHandler(db, bcrypt));
 
-app.post('/register', (req, res) => {
-    register.handleRegister(req, res, db, bcrypt)
-});
+app.post('/register', register.handleRegister(db, bcrypt));
 
-app.get('/profile/:id', (req, res) => {
-    profile.profileHandler(req, res, db);
-});
+app.get('/profile/:id', profile.profileHandler(db));
 
-app.put('/image', (req, res) => {
-    image.imageHandler(rq, res, db);
-});
+app.put('/image', image.imageHandler(db));
 
 app.listen(3000, () => {
     console.log('Server running on port 3000');

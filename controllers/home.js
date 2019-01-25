@@ -1,6 +1,4 @@
-
-
-const homeHandler = (req, res, db)=> db.select('*').from('users')
+const homeHandler = (db) => (req, res)=> db.select('*').from('users')
     .then(users => {
         res.json(users);
     });

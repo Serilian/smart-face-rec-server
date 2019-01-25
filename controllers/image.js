@@ -1,4 +1,4 @@
-const imageHandler = (req, res, db) => {
+const imageHandler = (db) => (req, res) => {
     const {id} = req.body;
 
     db('users')
