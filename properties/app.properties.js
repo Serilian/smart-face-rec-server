@@ -1,4 +1,4 @@
-const CLARIFAIAPIKEY = process.env.API_KEY;
+const CLARIFAIAPIKEY = '12119692b2de42c6aecc42849c1244ba';
 
 module.exports = {
     CLARIFAIAPIKEY: CLARIFAIAPIKEY
