@@ -16,8 +16,8 @@ app.use(helmet());
 app.use(bodyParser.json());
 
 const db = require('knex')(dbProperties.pg);
-
-app.get('/', home.homeHandler(db));
+// home.homeHandler(db)
+app.get('/', (req, res)=> { res.send('It is working')} );
 
 app.post('/signin', signin.signinHandler(db, bcrypt));
 
