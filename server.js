@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 
 const db = require('knex')(dbProperties.pg);
 
-app.get('/', home.homeHandler(db) );
+app.get('/', home.homeHandler(db));
 
 app.post('/signin', signin.signinHandler(db, bcrypt));
 
