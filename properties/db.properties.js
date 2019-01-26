@@ -2,7 +2,7 @@ const pg =
     {
         client: 'pg',
         connection: {
-            host: '127.0.0.1',
+            host: 'postgresql-curved-88940',
             user: 'fhagno',
             password: '',
             database: 'smart-brain'
